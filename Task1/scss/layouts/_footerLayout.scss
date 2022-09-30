@@ -1,0 +1,49 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+// Desktop
+.footer {
+  position: relative;
+  background: {
+    color: var.$colorFooterBackground;
+  }
+
+  &__wrapper {
+    @include mix.wrapper;
+
+    & > .clear-absolute {
+      margin-bottom: 12rem;
+      height: 1px;
+    }
+
+    & > .image-wrapper {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// Tablet
+@media only screen and (max-width: var.$tabletBreakpoint) {
+  .footer {
+    &__wrapper {
+      & > .clear-absolute {
+        margin-bottom: 18rem;
+      }
+    }
+  }
+}
+
+// Mobile
+@media only screen and (max-width: var.$mobileBreakpoint) {
+  .footer {
+    &__wrapper {
+      & > .clear-absolute {
+        margin-bottom: 16rem;
+      }
+
+      & > .image-wrapper {
+        padding: 0 2em;
+      }
+    }
+  }
+}

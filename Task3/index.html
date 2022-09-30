@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="heading">
+        <span class = "vertical"></span>
+        <span class="name">Temperature Converter</span>
+        <div class="line"></div>
+        <span class="dot"></span>
+        <span class="dot1"></span>
+    </div>
+
+    <!-- Main box -->
+    <div id="box">
+
+        <!-- unit box -->
+        <div id="unit">
+            <span id="From">
+               <select id="from">
+                <option value="celcius">Celcius</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="fahrenheit">Fahrenheit</option>
+               </select>
+            </span>
+
+            <span id ="im">
+                <img src="arrow.png" alt="">
+            </span>
+            <span id="To">
+                    <select id="to">
+                        <option value="kelvin">Kelvin</option>
+                     <option value="celcius">Celcius</option>
+                     <option value="fahrenheit">Fahrenheit</option>
+                    </select>
+            </span>
+        </div>
+
+        <!-- Number box -->
+        <div id="number">
+            <span id="entry">
+                <input type="number" placeholder="Enter value:" class="val" id="num">
+            </span>
+
+            <span id="result" class="val" >
+                <p id="my-para">Result:</p>
+            </span>
+        </div>
+
+        <!-- Result button -->
+        <div id="Button">
+            <button id="convertButton" onclick="fun()">CONVERT</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

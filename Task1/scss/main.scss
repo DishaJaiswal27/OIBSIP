@@ -1,0 +1,14 @@
+@use './base/reset';
+@use './base/typography';
+
+// Pages
+@use './pages/home';
+
+// Global Components
+@use './components/wrapper';
+@use './components/imageWrapper';
+@use './components/button';
+@use './components/cardReview';
+@use './components/boxContact';
+@use './components/navList';
+@use './components/attribution';

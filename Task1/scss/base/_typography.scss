@@ -1,0 +1,18 @@
+@use '../utils/variables' as var;
+
+// Raleway
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+// Open Sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: var.$fontOpenSans;
+  font-size: var.$bodyTextSize;
+}
+
+p {
+  line-height: 1.5em;
+  color: var.$colorNeutral;
+  opacity: 0.8;
+}

@@ -1,0 +1,74 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+// Desktop
+.intro {
+  padding : {
+    top: 2em;
+    bottom: 12em;
+  }
+  background: {
+    image: url(../images/backgrounds/bg-curvy-desktop.svg);
+    repeat: no-repeat;
+    size: contain;
+    position: center bottom;
+  }
+
+  &__title {
+    @include mix.heading;
+
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 860px;
+    text-align: center;
+    font-size: 2.9em;
+    line-height: 1.5em;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    margin: 0 auto;
+    margin-top: 2.2rem;
+    max-width: 580px;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  &__action {
+    @include mix.flex;
+
+    margin-top: 1.8rem;
+  }
+}
+
+// Tablet
+@media only screen and (max-width: var.$tabletBreakpoint) {
+  .intro {
+    &__title {
+      font-size: 2em;
+    }
+
+    &__paragraph {
+      font-size: 1.2em;
+    }
+  }
+}
+
+// Mobile
+@media only screen and (max-width: var.$mobileBreakpoint) {
+  .intro {
+    background: {
+      image: url(../images/backgrounds/bg-curvy-mobile.svg);
+    }
+
+    &__title {
+      font-size: 1.7em;
+    }
+
+    &__paragraph {
+      margin-top: 1rem;
+      padding: 0 1.4em;
+      font-size: 1em;
+    }
+  }
+}

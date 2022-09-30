@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images\logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <ion-icon name="close-sharp" class="fas fa-close" onclick="closemenu()"></ion-icon>
+                </ul>
+                <ion-icon name="menu-sharp" class="fas fa-menu" onclick="openmenu()"></ion-icon>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Disha</span> Jaiswal <br>from India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images\user.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="para">Lorem Ipsum is simply dummy text of the printing and 
+                        typesetting industry. Lorem Ipsum has been the industry's standard 
+                        dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                         but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in 
+                      the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+                      desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App development</li>
+                            <li><span>Web development</span><br>Web App development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 Current</span><br>B.Tech 2020-24<br>Shri Vaishnav Vidhyapeeth Vishwavidhayala, Indore(M.P.), <bold>India</bold></li>
+                            <li><span>2020</span><br>Higher Senior Secondary Education - 85.6% <br>Shri Bajpai Convent H.S. School, Ghatabillod - Dhar(M.P.), <bold>India</bold></li>
+                            <li><span>2018</span><br>Higher Secondary Education - 88.8% <br>Moral Academy ,Indore(M.P.), <bold>India</bold></li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------portfolio------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>TemperaturConverter App</h3>
+                        <p>The app converts the temperature from one unit to another.</p>
+                        <a href="https://github.com/DishaJaiswal27/TemperaturConverter.git" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Landing Page </h3>
+                        <p>The Fylo Landing page.</p>
+                        <a href="https://github.com/DishaJaiswal27/Landing_page.git" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world.</p>
+                        <a href="#"><ion-icon name="link-outline"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- --------------contact------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><ion-icon name="mail-sharp"></ion-icon>  contact@eg.com</p>
+                    <p><ion-icon name="call-sharp"></ion-icon>  012345667</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_disha_2704/?next=%2F" target="_blank" class="fab fa-insta"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/disha-jaiswal-2a1968202/" target="_blank"  class="fab fa-linkedin"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                        <a href="" class="btn btn1">Download CV</a>
+                    </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Meassage" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn1">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>COPYRIGHT © 2022 DISHA</p>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

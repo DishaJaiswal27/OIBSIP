@@ -1,0 +1,46 @@
+@use '../utils/variables' as var;
+
+.button {
+  font-family: var.$fontRaleway;
+  font-size: 1.2em;
+  font-weight: 700;
+
+  background: {
+    image: var.$colorButtonCTA;
+  }
+  color: var.$colorNeutral;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: {
+      image: linear-gradient(45deg, hsl(176, 89%, 75%), hsl(176, 68%, 64%));
+    }
+  }
+
+  &--primary {
+    @extend .button;
+    padding: 1em 5.4em;
+  }
+
+  &--submit {
+    @extend .button;
+    font-size: 1em;
+    padding: 1.1em 2.4em;
+  }
+}
+
+@media only screen and (max-width: var.$mobileBreakpoint) {
+  .button {
+    & {
+      font-size: 1em;
+    }
+
+    &--submit {
+      width: 100%;
+    }
+  }
+}

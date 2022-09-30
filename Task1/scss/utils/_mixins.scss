@@ -1,0 +1,57 @@
+@use './variables' as var;
+
+// Heading
+@mixin heading {
+  font-family: var.$fontRaleway;
+  color: var.$colorNeutral;
+}
+
+// Wrapper
+@mixin wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var.$maxDesktopWidth;
+  padding: 0 1.5em;
+}
+
+// Flex Parent
+@mixin flex($justify-content: center, $align-items: center, $direction: row) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: $justify-content;
+  -ms-flex-pack: $justify-content;
+  justify-content: $justify-content;
+  -webkit-box-align: $align-items;
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+
+  @if $direction == column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+  } @else if $direction == row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+}
+
+// Box Shadow
+@mixin boxShadow(
+  $offsetX: 2px,
+  $offsetY: 2px,
+  $blur: 15px,
+  $spread: 0,
+  $color: rgba(0, 0, 0, 0.2)
+) {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: $offsetX $offsetY $blur $spread $color;
+  -moz-box-shadow: $offsetX $offsetY $blur $spread $color;
+  box-shadow: $offsetX $offsetY $blur $spread $color;
+}
